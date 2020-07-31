@@ -104,7 +104,7 @@ def make_model(output_bias=None):
         output_bias = tf.keras.initializers.Constant(output_bias)
     model=tf.keras.Sequential()
     #Mettre 600 ou 1200
-    model.add(tf.keras.layers.GRU(8,input_shape=(1200,1)))
+    model.add(tf.keras.layers.GRU(16,input_shape=(1200,1)))
     #Mettre 2 ou 3
     model.add(tf.keras.layers.Dense(2,bias_initializer=output_bias))
     model.compile(optimizer='adam',
